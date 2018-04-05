@@ -1,8 +1,8 @@
-from tkinter import *
-from tkinter import messagebox as ms
+from Tkinter import *
+import tkMessageBox as ms
 import sqlite3
 import os
-
+from alt2 import *
 with sqlite3.connect('projectDB.db') as db:
     c = db.cursor()
 
@@ -27,8 +27,10 @@ class main:
             result = c.fetchall()
 		
             if result:
-                filename = 'alt2.py'
-                os.system(filename)
+                #filename = 'alt2.py'
+                os.system("python alt2.py ")
+                #root.destroy()
+
             else:
                 ms.showerror('Oops!','Username Not Found.')
                 self.username.set('')

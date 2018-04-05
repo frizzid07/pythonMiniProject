@@ -1,4 +1,4 @@
-from tkinter import *
+from Tkinter import *
 
 root = Tk()
 root.title("Indian Cuisine Menu")
@@ -15,7 +15,7 @@ lbl2.grid(row=1, column=1, columnspan=2)
 lbl3 = Label(frame, text="Item(s)", fg="springgreen", pady=5, bg="dark slate blue", font=("Helvetica", 18))
 lbl3.grid(row=2)
 
-lbl4 = Label(frame, text="Price(₹)", fg="springgreen", pady=5, bg="dark slate blue", font=("Helvetica", 18))
+lbl4 = Label(frame, text="Price()", fg="springgreen", pady=5, bg="dark slate blue", font=("Helvetica", 18))
 lbl4.grid(row=2, column=1)
 
 lbl5 = Label(frame, text="Item\nSelection", fg="springgreen", pady=5, bg="dark slate blue", font=("Helvetica", 18))

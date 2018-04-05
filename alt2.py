@@ -1,4 +1,4 @@
-from tkinter import *
+from Tkinter import *
 import os
 
 class main:
@@ -11,8 +11,9 @@ class main:
 		self.widgets()
 	
 	def callback(self):
-		filename = 'alt3.py'
-		os.system(filename)
+		#filename = 'alt3.py'
+		os.system("python alt3.py")
+		#root1.destroy()
 	
 	def widgets(self):
 		self.frame = Frame(self.master, bg="dark slate blue")
@@ -26,7 +27,7 @@ class main:
 		self.frame.grid()
 
 if __name__ == '__main__':
-    root = Tk()
-    root.title('Table Selection')
-    main(root)
-    root.mainloop()			
+    root1 = Tk()
+    root1.title('Table Selection')
+    main(root1)
+    root1.mainloop()

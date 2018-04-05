@@ -1,4 +1,4 @@
-from tkinter import *
+from Tkinter import *
 import os
 
 class main:
@@ -8,8 +8,9 @@ class main:
 		self.widgets()
 		
 	def callback(self):
-		filename = 'mainPage.py'
-		os.system(filename)
+		#filename = 'mainPage.py'
+		os.system("python mainPage.py")
+		#root.destroy()
 	
 	def widgets(self):
 		self.frame = Frame(self.master, bg = "dark slate blue")
