@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<link rel="shortcut icon" href="favicon\boxIcon.png"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css"/>
+        <title>Box4U | Breads</title>
+    </head>
+    <body onload="getLocation()" data-spy=scroll data-target=.navbar>
+        <script type="text/javascript">
+            function getLocation()
+            {
+                var x = document.getElementById("loca");
+                if(navigator.geolocation)
+                    navigator.geolocation.watchPosition(showPosition,errorHandler);
+            }
+            function showPosition(position){
+                var x = document.getElementById("loca");
+                x.innerHTML = "Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude;
+            }
+            function errorHandler(error){
+                var x = document.getElementById("loca");
+                if (error.code==error.PERMISSION_DENIED) 
+                    x.innerHTML="Location request denied"
+                else if (error.code==error.POSITION_UNVAILABLE) 
+                    x.innerHTML="Location INFO NOT AVAILABLE"
+                else if (error.code==error.TIMEOUT) 
+                    x.innerHTML="Location request denied"
+                else if (error.code==error.UNKNOWN_ERROR) 
+                    x.innerHTML="UNKNOWN ERROR"
+            }
+        </script>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="menuColumn">
+                <p class="location" id="loca" ></p>
+                <p class="pHomeHead" style="left: 23%; top: 20px; text-indent: 10px;font-family: Product Sans;">
+                    <a href="index.html"><img src="logos\trans2.png" alt="Main Logo" vspace="10" title="Box4U" style="float:left" hspace="20"/></a>
+                    <b style="font-size : 3vw">On the Menu - Breads</b>
+                </p>
+                </div>
+                <div class="correction">
+                    <nav class="navbar navbarDesign navbar-expand-lg navbar-light bg-light" data-spy="affix" data-offset-top="115">
+                    	<div class="container">
+	                        <div class="navbar-header">
+                                <button style="background: red;     padding: 10px 10px; color: white;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                              </button>
+	                        	<a class="navbar-brand" href="index.html">Home</a>
+	                        </div>
+	                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		                        <ul class="nav navbar-nav">
+		                            <li ><a href="index.html#menuTab">Menu</a></li>
+		                            <li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#">Orders<span class="caret"></span></a>
+		                                <ul class="dropdown-menu list-group" >
+		                                    <li class="list list-group-item" ><a href="#">Corporate Orders</a></li>
+		                                    <li class="list list-group-item" ><a href="#">Party Orders</a></li>
+		                                </ul>
+		                            </li>
+		                            <li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<span class="caret"></span></a>
+		                                <ul class="dropdown-menu list-group" >
+		                                    <li class="list list-group-item" ><a href="#">The Team</a></li>
+		                                    <li class="list list-group-item" ><a href="#">The Website</a></li>
+		                                    <li class="list list-group-item disabled" ><a href="#">The Mobile App</a></li>
+		                                </ul>
+		                            </li>
+		                            <li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact<span class="caret"></span></a>
+		                                <ul class="dropdown-menu list-group" >
+		                                    <li class="list list-group-item" ><a href="#">E-mail</a></li>
+		                                    <li class="list list-group-item" ><a href="#">Office Postbox</a></li>
+		                                    <li class="list list-group-item" ><a href="#">Hotline</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    	<form class="navbar-form navbar-right" style="position: absolute; right: 20px;" action="">
+	                                <div class="input-group">
+	                                    <input type="text" class="form-control textStyle" style="color: darkred;" placeholder="Search">
+	                                    <div class="input-group-btn">
+	                                      <button class="btn btnStyle" style="width: 40px;" type="submit">
+	                                      <i class="glyphicon glyphicon-search"></i>
+	                                      </button>
+	                                    </div>
+	                                </div>
+	                            </form>
+		                    </div>
+	                    </div>
+                    </nav>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="headMenu">
+                        <p class="row" style="margin-top: 30px">-----Breads-----</p>
+                    </div>
+                </div>
+
+                <div class="container">
+                	<div class="row" style="margin-top: 30">
+                		<div class="col-lg-4 col-md-6 col-sm-6">
+                            <!-- Roti -->
+                			<div class="thumbnail">
+                				<a href="#chapatiModal" data-toggle="modal" data-target="#chapatiModal">
+	                                <img class=" img-responsive" style="width: 380px; height: 278px;" alt="Roti" src="images/chapati.jpg" title="Roti" data-target="#chapatiModal"/>
+	                                <div class="bottom-left">Roti</div>
+                            	</a>
+                			</div>
+                		</div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="chapatiModal" tabindex="-1" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Roti</h4>
+                              </div>
+                              <div class="modal-body"> 
+                                <img class="img-responsive" style="width: 380px; height: 278px;" alt="Roti" src="images/chapati.jpg" title="Puri"/>
+                                <div class="bottom-left">Roti</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Naan -->
+                		<div class="col-lg-4 col-md-6 col-sm-6">
+                			<div class="thumbnail">
+                				<a href="#naanModal" data-toggle="modal" data-target="#naanModal">
+                                	<img class="img-responsive" style="width: 380px; height: 278px;" alt="Naan" src="images/Naan.jpg" title="Naan"/>
+                                	<div class="bottom-left">Naan</div>
+                            	</a>
+                			</div>
+                		</div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="naanModal" tabindex="-1" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Naan</h4>
+                              </div>
+                              <div class="modal-body"> 
+                                <img class="img-responsive" style="width: 380px; height: 278px;" alt="Naan" src="images/Naan.jpg" title="Naan"/>
+                                <div class="bottom-left">Naan</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       <!--Paratha -->
+                		<div class="col-lg-4 col-md-6 col-sm-6">
+                			<div class="thumbnail">
+                				<a href="#parathaModal" data-toggle="modal" data-target="#parathaModal">
+                                	<img class="img-responsive" style="width: 380px; height: 278px;" alt="Naan" src="images/paratha.jpg" title="Paratha"/>
+                                	<div class="bottom-left">Paratha</div>
+                            	</a>
+                			</div>
+                		</div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="parathaModal" tabindex="-1" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Paratha</h4>
+                              </div>
+                              <div class="modal-body"> 
+                                <img class="img-responsive" style="width: 380px; height: 278px;" alt="Naan" src="images/Naan.jpg" title="Naan"/>
+                                <div class="bottom-left">Paratha</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Kulcha -->
+                        <div class="col-lg-4 col-lg-push-2 col-md-6 col-sm-6">
+                            <div class="thumbnail">
+                                <a href="#kulchaModal" data-toggle="modal" data-target="#kulchaModal">
+                                    <img class="img-responsive" style="width: 380px; height: 278px;" alt="Kulcha" src="images/kulcha.jpg" title="Kulcha"/>
+                                    <div class="bottom-left">Kulcha</div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="kulchaModal" tabindex="-1" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Kulcha</h4>
+                              </div>
+                              <div class="modal-body"> 
+                                <img class="img-responsive" style="width: 380px; height: 278px;" alt="Kulcha" src="images/kulcha.jpg" title="Kulcha"/>
+                                <div class="bottom-left">Kulcha</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Puri -->
+                        <div class="col-lg-4 col-lg-push-2 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3">
+                            <div class="thumbnail">
+                                <a href="#puriModal" data-toggle="modal" data-target="#puriModal">
+                                    <img class="img-responsive" style="width: 380px; height: 278px;" alt="Puri" src="images/puri.jpg" title="Puri"/>
+                                    <div class="bottom-left">Puri</div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="puriModal" tabindex="-1" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Puri</h4>
+                              </div>
+                              <div class="modal-body"> 
+                                <img class="img-responsive" style="width: 380px; height: 278px;" alt="Puri" src="images/puri.jpg" title="Puri"/>
+                                <div class="bottom-left">Puri</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div> <!-- row end -->   
+                </div> <!-- container end -->
+            </div> <!-- row end -->
+        </div> <!-- container-fluid end -->
+        <!-- Button trigger modal -->
+        <script
+                   src="https://code.jquery.com/jquery-3.3.1.js"
+                   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                   crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
